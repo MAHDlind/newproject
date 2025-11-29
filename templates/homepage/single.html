@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>UserName</th>
+            <th>Name</th>
+            <th>LastName</th>
+            <th>JoinDate</th>
+            <th>LastLogin</th>
+        </tr>
+        <tr>
+            <td>{{ costumer.id }}</td>
+            <td>{{ costumer.username }}</td>
+            <td>{{ costumer.name }}</td>
+            <td>{{ costumer.lastname }}</td>
+            <td>{{ costumer.join_at }}</td>
+            <td>{{ costumer.last_login }}</td>
+        </tr>
+    </table>
+{% endblock %}

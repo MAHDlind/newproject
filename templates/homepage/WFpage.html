@@ -1,13 +1,36 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 
-<body>
+    <div class="page-container">
 
- <h1>hello</h1>
+        {% include 'duplicate_sections/category_filter.html' %}
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis distinctio dolores, eum inventore laborum, minus modi, necessitatibus officia officiis porro quisquam repellat reprehenderit sint ut voluptatum. Labore non recusandae tempore!</p><br>
-<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-</p>
-</body>
+        <p id="customers-list">Customers List:</p>
 
-{% endblock  %}
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>UserName</th>
+                <th>Name</th>
+                <th>LastName</th>
+                <th>JoinDate</th>
+                <th>LastLogin</th>
+            </tr>
+
+            {% for costumer in costumers %}
+                <tr onclick="window.location='{% url 'homepage:single' costumer.id %}'" class="click-row">
+                    <td>{{ costumer.id }}</td>
+                    <td>{{ costumer.username }}</td>
+                    <td>{{ costumer.name }}</td>
+                    <td>{{ costumer.lastname }}</td>
+                    <td>{{ costumer.join_at }}</td>
+                    <td>{{ costumer.last_login }}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+{% endblock %}

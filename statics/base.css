@@ -1,0 +1,110 @@
+@font-face {
+    font-family: Vazirmatn;
+    src: url("fonts/webfonts/Vazirmatn-Medium.woff2");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.page-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#customers-list {
+    font-family: Vazirmatn;
+    font-size: 22px;
+    margin: 0;
+    padding-left: 3px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Vazirmatn;
+    font-size: 16px;
+
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+table th {
+    background: #2d3436;
+    color: #fff;
+    padding: 14px;
+    text-align: left;
+    font-weight: 600;
+}
+
+table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:hover {
+    background: #f1f2f6;
+}
+
+.click-row {
+    cursor: pointer;
+}
+
+.click-row:hover {
+    background: #dfe6e9;
+}
+
+/* CATEGORY BOX */
+.category-box {
+    font-family: Vazirmatn;
+
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 18px 20px;
+
+    width: 260px;
+    border-radius: 10px;
+
+    box-shadow: 0 0 12px rgba(0,0,0,0.08);
+
+    align-self: flex-end;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.category-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2d3436;
+    margin: 0;
+}
+
+.category-item {
+    font-size: 16px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: #f1f2f6;
+    color: #2d3436;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.category-item:hover {
+    background: #dfe6e9;
+}
+
+a {
+    text-decoration: none;
+}
